@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+html {
+    font-family: "Roboto";
+    
+    height: 100%;
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+  /* Navigācija */
+.navbar {
+    background-color: #FAFAFA;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    padding:0 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;  
+    align-items: center;
+}
+
+.logo{
+    max-width: 250px;
+}
+
+nav a.push {
+    margin-left: auto;
+}
+
+.link {
+    margin: 10px 5px;
+    font-family: Roboto-Bold;
+    text-decoration: none;
+    color: #0F7799;
+}
+
+.link:hover{  
+    text-decoration: 2px solid underline #0F7799;
+}
+
+#sidebar h1{
+    color:#77990F;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 80px;
+}
+
+#sidebar a{
+    text-decoration: none;
+    color:#77990F;
+}
+
+.image{
+    height: 20px;
+    width: 20px;
+    text-align: left;
+}
+
+#virsraksts{
+    color:#77990F;
+    font-size: 20px;
+}
+
+.center th{
+    background-color: #77990F;
+    border-right: 1px solid white;
+}
+
+.center .option{
+    border-right: 2px solid #77990F;
+}
+
+#list{
+    color:#77990F;
+    text-align: left;
+}
+#list a{
+    color:#77990F;
+    text-decoration: none;
+    
+}
+#list th{
+    color: white;
+    height: 40px;
+    padding-left: 7px;
+}
+
+.center td{
+    border: 1px solid lightgray;
+    background-color: rgb(243, 242, 242);
+    height: 40px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+label{
+    color: #0F7799;
+    font-family: Roboto-Bold;
+    font-size: 15px;
+}
+
+.form{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-form{
+    align-items: left;
+}
+
+.blogs{
+    padding: 100px 30px 50px 30px;
+    text-align: center;
+    height: 90vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("./img/showcase.jpg") center;
+}
+
+.blogs h1{
+    color: #77990F;
+    font-size: 20px;
+}
+
+.s1 {
+    color: #77990F;
+    padding: 170px 30px 50px 10px;
+    text-align: center;
+    height: 84vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("./img/showcase.jpg") center;
+}
+
+.s1 h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+  /* bloga ierakstu lapa */
+.bloga-ieraksti{
+    margin-top: 100px;
+    display: grid;
+    min-height: 81vh;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "sidebar virsraksts virsraksts virsraksts"
+    "sidebar content1 content1 content1"
+    "sidebar content1 content1 content1";
+    grid-gap: 0.2rem;
+    text-align: center;
+}
+
+#virsraksts{
+    grid-area: virsraksts;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#sidebar{
+    grid-area: sidebar;
+    border-right: 2px solid #77990F;
+}
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.center{
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.list #table, th, td{
+    border: 1px solid #77990F;
+}
+
+#content1{
+    grid-area: content1;
+    color: #0F7799;
+    padding: 0px 70px 30px 70px;
+}
+
+#content1 a{
+    color: #0F7799;
+    text-decoration: none;
+    font-family: Roboto-Bold;
+    font-size: 17px;
+}
+
+.article{
+    padding-bottom: 30px;
+    text-align: justify;
+    margin: 0px 50px ;
+}
+
+.first200{
+    text-align: justify;
+    margin: 0 50px 40px 50px;
+}
+#content2{
+    grid-area: content2;
+    color: #77990F;
+    margin: 0 50px 40px 50px;
+}
+
+.blogContent{
+    text-align: justify;
+    color: #0F7799;
+}
+
+#content3{
+    grid-area: content3;
+}
+
+.ieraksts{
+    margin-top: 100px;
+    display: grid;
+    min-height: 81vh;
+    height: auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+    "sidebar virsraksts"
+    "sidebar content2";
+    grid-gap: 0.2rem;
+    text-align: center;
+
+}
+
+.blog-form{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+    "sidebar virsraksts"
+    "sidebar form";
+    grid-gap: 0.2rem;
+    text-align: center;
+}
+
+#form{
+    grid-area: form;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.poga{
+    width: 700px;
+    text-align: center;
+    color: white;
+    background: #0F7799;
+    border: 1px solid #0F7799;
+    margin-bottom: 20px;
+}
+
+.input{
+    width:350px;
+    margin-bottom: 8px;
+}
+
+.blog-list{
+    margin-top: 100px;
+    display: grid;
+    min-height: 81vh;
+    height: auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+    "sidebar virsraksts"
+    "sidebar list";
+    grid-gap: 0.2rem;
+    text-align: center;
+}
+
+#list{
+    grid-area: list;
+}
+
+  /* Kājene */
+.foo {
+    /* display: flex; */
+    width: 100%;
+    height: 100px;
+    color:#fff;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    background: #0f7799; 
+    padding: 40px 20px;
+    word-wrap:normal;  
+}
+
+  /* Pielāgošanās mazākiem ekrāna izmēriem */
+@media(max-width: 768px) {
+    .navbar {
+    justify-content: center;
+    }
+    .link{
+    display: none;
+    }
+    .container{
+    grid-template-columns: auto;
+    }
+}
